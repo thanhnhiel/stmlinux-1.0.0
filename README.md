@@ -49,7 +49,7 @@ make
 
 9. Programing by st-link tools on the window.
 Output files:<br>
-```html
+
 <table>
 <tr>
 <th>File name</th><th>Offset</th><th>Path</th>
@@ -61,7 +61,7 @@ Output files:<br>
 <td>qtdemo2.uImage.bin</td><td>0x08020000</td><td>stmlinux-1.0.0/projects/qtdemo2</td>
 </tr>
 </table>
-```
+
 
 10.
 ```bash
