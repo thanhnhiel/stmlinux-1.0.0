@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- extending.qdoc -->
+  <title>Qt 4.7: Writing QML Components: Properties, Methods and Signals</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="scripts/jquery.js" type="text/javascript"></script>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+</head>
+<body class="offline narrow creator">
+ <div class="header" id="qtdocheader">
+    <div class="content"> 
+    <div id="nav-logo">
+      <a href="index.html">Home</a></div>
+    <a href="index.html" class="qtref"><span>Qt Reference Documentation</span></a>
+    <div id="narrowsearch"></div>
+    <div id="nav-topright">
+      <ul>
+        <li class="nav-topright-home"><a href="http://qt.nokia.com/">Qt HOME</a></li>
+        <li class="nav-topright-dev"><a href="http://developer.qt.nokia.com/">DEV</a></li>
+        <li class="nav-topright-labs"><a href="http://labs.qt.nokia.com/blogs/">LABS</a></li>
+        <li class="nav-topright-doc nav-topright-doc-active"><a href="http://doc.qt.nokia.com/">
+          DOC</a></li>
+        <li class="nav-topright-blog"><a href="http://blog.qt.nokia.com/">BLOG</a></li>
+      </ul>
+    </div>
+    <div id="shortCut">
+      <ul>
+        <li class="shortCut-topleft-inactive"><span><a href="index.html">Qt 4.7</a></span></li>
+        <li class="shortCut-topleft-active"><a href="http://doc.qt.nokia.com">ALL VERSIONS        </a></li>
+      </ul>
+     </div>
+ <ul class="sf-menu" id="narrowmenu"> 
+ 			<li><a href="#">API Lookup</a> 
+ 				<ul> 
+ 					<li><a href="classes.html">Class index</a></li> 
+           <li><a href="functions.html">Function index</a></li> 
+           <li><a href="modules.html">Modules</a></li> 
+           <li><a href="namespaces.html">Namespaces</a></li> 
+           <li><a href="qtglobal.html">Global Declarations</a></li> 
+           <li><a href="qdeclarativeelements.html">QML elements</a></li> 
+ 		    </ul> 
+ 			</li> 
+ 			<li><a href="#">Qt Topics</a> 
+ 				<ul> 
+ 					   <li><a href="qt-basic-concepts.html">Programming with Qt</a></li>  
+ 					   <li><a href="qtquick.html">Device UIs &amp; Qt Quick</a></li>  
+ 					   <li><a href="qt-gui-concepts.html">UI Design with Qt</a></li>  
+ 					   <li><a href="developing-with-qt.html">Cross-platform and Platform-specific</a></li>  
+ 					   <li><a href="platform-specific.html">Platform-specific info</a></li>  
+ 					   <li><a href="technology-apis.html">Qt and Key Technologies</a></li>  
+ 					   <li><a href="best-practices.html">How-To's and Best Practices</a></li>  
+ 		     </ul> 
+ 				</li> 
+ 				<li><a href="#">Examples</a> 
+ 					<ul> 
+ 		              <li><a href="all-examples.html">Examples</a></li> 
+ 		              <li><a href="tutorials.html">Tutorials</a></li> 
+ 		              <li><a href="demos.html">Demos</a></li> 
+ 		              <li><a href="qdeclarativeexamples.html">QML Examples</a></li> 
+ 		       </ul> 
+ 					</li> 
+ 				</ul> 
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="hd">
+      <span></span>
+    </div>
+    <div class="bd group">
+      <div class="sidebar">
+        <div class="searchlabel">
+          Search index:</div>
+        <div class="search" id="sidebarsearch">
+          <form id="qtdocsearch" action="" onsubmit="return false;">
+            <fieldset>
+              <input type="text" name="searchstring" id="pageType" value="" />
+ <div id="resultdialog"> 
+ <a href="#" id="resultclose">Close</a> 
+<!-- <p id="resultlinks" class="all"><a href="#" id="showallresults">All</a> | <a href="#" id="showapiresults">API</a> | <a href="#" id="showarticleresults">Articles</a> | <a href="#" id="showexampleresults">Examples</a></p> 
+ <p id="searchcount" class="all"><span id="resultcount"></span><span id="apicount"></span><span id="articlecount"></span><span id="examplecount"></span>&nbsp;results:</p> --> 
+ <ul id="resultlist" class="all"> 
+ </ul> 
+ </div> 
+            </fieldset>
+          </form>
+        </div>
+        <div class="box first bottombar" id="lookup">
+          <h2 title="API Lookup"><span></span>
+            API Lookup</h2>
+          <div  id="list001" class="list">
+          <ul id="ul001" >
+              <li class="defaultLink"><a href="classes.html">Class index</a></li>
+              <li class="defaultLink"><a href="functions.html">Function index</a></li>
+              <li class="defaultLink"><a href="modules.html">Modules</a></li>
+              <li class="defaultLink"><a href="namespaces.html">Namespaces</a></li>
+              <li class="defaultLink"><a href="qtglobal.html">Global Declarations</a></li>
+              <li class="defaultLink"><a href="qdeclarativeelements.html">QML elements</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="box bottombar" id="topics">
+          <h2 title="Qt Topics"><span></span>
+            Qt Topics</h2>
+          <div id="list002" class="list">
+            <ul id="ul002" >
+			   <li class="defaultLink"><a href="qt-basic-concepts.html">Programming with Qt</a></li> 
+			   <li class="defaultLink"><a href="qtquick.html">Device UIs &amp; Qt Quick</a></li> 
+			   <li class="defaultLink"><a href="qt-gui-concepts.html">UI Design with Qt</a></li> 
+			   <li class="defaultLink"><a href="developing-with-qt.html">Cross-platform and Platform-specific</a></li> 
+			   <li class="defaultLink"><a href="platform-specific.html">Platform-specific info</a></li> 
+			   <li class="defaultLink"><a href="technology-apis.html">Qt and Key Technologies</a></li> 
+			   <li class="defaultLink"><a href="best-practices.html">How-To's and Best Practices</a></li> 
+            </ul>  
+          </div>
+        </div>
+        <div class="box" id="examples">
+          <h2 title="Examples"><span></span>
+            Examples</h2>
+          <div id="list003" class="list">
+        <ul id="ul003">
+              <li class="defaultLink"><a href="all-examples.html">Examples</a></li>
+              <li class="defaultLink"><a href="tutorials.html">Tutorials</a></li>
+              <li class="defaultLink"><a href="demos.html">Demos</a></li>
+              <li class="defaultLink"><a href="qdeclarativeexamples.html">QML Examples</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="toolbar">
+          <div class="breadcrumb toolblock">
+            <ul>
+              <li class="first"><a href="index.html">Home</a></li>
+              <!--  Bread crumbs goes here -->
+              <li>Writing QML Components: Properties, Methods and Signals</li>            </ul>
+          </div>
+          <div class="toolbuttons toolblock">
+            <ul>
+              <li id="smallA" class="t_button">A</li>
+              <li id="medA" class="t_button active">A</li>
+              <li id="bigA" class="t_button">A</li>
+              <li id="print" class="t_button"><a href="javascript:this.print();">
+                <span>Print</span></a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#defining-new-components">Defining New Components</a></li>
+<li class="level1"><a href="#adding-properties">Adding Properties</a></li>
+<li class="level2"><a href="#supported-property-types">Supported property types</a></li>
+<li class="level2"><a href="#property-change-signals">Property change signals</a></li>
+<li class="level2"><a href="#default-properties">Default properties</a></li>
+<li class="level2"><a href="#property-aliases">Property aliases</a></li>
+<li class="level3"><a href="#considerations-for-property-aliases">Considerations for property aliases</a></li>
+<li class="level1"><a href="#adding-methods">Adding Methods</a></li>
+<li class="level1"><a href="#adding-signals">Adding Signals</a></li>
+<li class="level2"><a href="#connecting-signals-to-methods-and-other-signals">Connecting signals to methods and other signals</a></li>
+<li class="level3"><a href="#forwarding-signals">Forwarding signals</a></li>
+</ul>
+</div>
+<h1 class="title">Writing QML Components: Properties, Methods and Signals</h1>
+<span class="subtitle"></span>
+<!-- $$$qml-extending-types.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>One of the key concepts in QML is the ability to define your own QML components that suit the purposes of your application. The standard <a href="qdeclarativeelements.html">QML Elements</a> provide the essential components for creating a QML application; beyond these, you can write your own custom components that can be created and reused, without the use of C++.</p>
+<p>Components are the building blocks of a QML project. When writing a QML application, whether large or small, it is best to separate QML code into smaller components that perform specific sets of operations, instead of creating mammoth QML files with large, combined functionality that is more difficult to manage and may contain duplicated code.</p>
+<a name="defining-new-components"></a>
+<h2>Defining New Components</h2>
+<p>A component is a reusable type with a well-defined interface, built entirely in QML. Any snippet of QML code can become a component, by placing the code in a file &quot;&lt;Name&gt;.qml&quot; where &lt;Name&gt; is the new component name, beginning with an uppercase letter. These QML files automatically become available as new QML element types to other QML components and applications in the same directory.</p>
+<p>For example, one of the simplest and most common components you can build in QML is a button-type component. Below, we implement this component as a <a href="qml-rectangle.html">Rectangle</a> with a clickable <a href="qml-mousearea.html">MouseArea</a>, in a file named <tt>Button.qml</tt>:</p>
+<pre class="highlightedCode brush: cpp"> // Button.qml
+ import QtQuick 1.0
+
+ Rectangle {
+     width: 100; height: 100
+     color: &quot;red&quot;
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: console.log(&quot;Button clicked!&quot;)
+     }
+ }</pre>
+<p>Now this component can be reused by another file within the same directory. Since the file is named <tt>Button.qml</tt>, the component is referred to as <tt>Button</tt>:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p><pre class="highlightedCode brush: cpp"> // application.qml
+ import QtQuick 1.0
+
+ Column {
+     Button { width: 50; height: 50 }
+     Button { x: 50; width: 100; height: 50; color: &quot;blue&quot; }
+     Button { width: 50; height: 50; radius: 8 }
+ }</pre>
+</p></td><td ><p><p class="centerAlign"><img src="images/qml-extending-types.png" /></p></p></td></tr>
+</table>
+<p>The root object in <tt>Button.qml</tt> defines the attributes that are available to users of the <tt>Button</tt> component. In this case, the root object is a <a href="qml-rectangle.html">Rectangle</a>, so any properties, methods and signals of <a href="qml-rectangle.html">Rectangle</a> are made available, allowing <tt>application.qml</tt> to customize the <tt>width</tt>, <tt>height</tt>, <tt>radius</tt> and <tt>color</tt> properties of <tt>Button</tt> objects.</p>
+<p>If <tt>Button.qml</tt> was not in the same directory, <tt>application.qml</tt> would need to load it as a <a href="qdeclarativemodules.html">module</a> from a specific filesystem path or <a href="qdeclarativeextensionplugin.html">plugin</a>. Also, note the letter case of the component file name is significant on some (notably UNIX) filesystems. It is recommended the file name case matches the case of the QML component name exactly - for example, <tt>Box.qml</tt> and not <tt>BoX.qml</tt> - regardless of the platform to which the QML component will be deployed.</p>
+<p>To write a useful component, it is generally necessary to provide it with custom attributes that store and communicate specific data. This is achieved by adding the following attributes to your components:</p>
+<ul>
+<li><b>Properties</b> that can be accessed externally to modify an object (for example, <a href="qml-item.html">Item</a> has <a href="qml-item.html#width-prop">width</a> and <a href="qml-item.html#height-prop">height</a> properties) and used in <a href="propertybinding.html">Property Binding</a></li>
+<li><b>Methods</b> of JavaScript code can be invoked internally or externally (for example, <a href="qml-animation.html">Animation</a> has a <a href="qml-animation.html#start-method">start()</a> method)</li>
+<li><b>Signals</b> to notify other objects when an event has occurred (for example, <a href="qml-mousearea.html">MouseArea</a> has a <tt>clicked</tt> signal)</li>
+</ul>
+<p>The following sections show how these attributes can be added to QML components.</p>
+<a name="adding-properties"></a>
+<h2>Adding Properties</h2>
+<p>A property is a value of a QML component that can be read and modified by other objects. For example, a <a href="qml-rectangle.html">Rectangle</a> component has <a href="qml-item.html#width-prop">width</a>, <a href="qml-item.html#height-prop">height</a> and <a href="qml-rectangle.html#color-prop">color</a> properties. Significantly, properties be used with <a href="propertybinding.html">Property Binding</a>, where a property value is automatically updated using the value of another property.</p>
+<p>The syntax for defining a new property is:</p>
+<pre class="highlightedCode brush: cpp"> [default] property &lt;type&gt; &lt;name&gt;[: defaultValue]</pre>
+<p>A <tt>property</tt> declaration can appear anywhere within a QML component definition, but it is customary to place it at the top. A component cannot declare more than one property with the same name. (It is possible to have a property name that is the same as an existing property in a type, but this is not recommended as the existing property becomes hidden and inaccessible.)</p>
+<p>Below is an example. The <tt>ImageViewer</tt> component has defined a <tt>string</tt> type property named <tt>currentImage</tt>, and its initial value is &quot;default-image.png&quot;. This property is used to set the image displayed in the child <a href="qml-image.html">Image</a> object. Another file, <tt>application.qml</tt>, can create an <tt>ImageViewer</tt> object and read or modify the <tt>currentImage</tt> value:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p><pre class="highlightedCode brush: cpp"> // ImageViewer.qml
+ import QtQuick 1.0
+
+ Item {
+     id: item
+     width: 200; height: 200
+
+     property string currentImage: &quot;default-image.png&quot;
+
+     Image { source: item.currentImage }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> import QtQuick 1.0
+
+ ImageViewer {
+     id: viewer
+
+     currentImage: &quot;http://qt.nokia.com/logo.png&quot;
+
+     Text { text: viewer.currentImage }
+ }</pre>
+</p></td></tr>
+</table>
+<p>It is optional for a property to have a default value. The default value is a convenient shortcut, and is behaviorally identical to doing it in two steps, like this:</p>
+<pre class="highlightedCode brush: cpp"> // Use default value
+ property int myProperty: 10
+
+<span class="comment"> // Longer, but behaviorally identical</span>
+ property int myProperty
+ myProperty: 10</pre>
+<a name="supported-property-types"></a>
+<h3>Supported property types</h3>
+<p>All QML properties are typed. The examples above show properties with <tt>int</tt> and <tt>string</tt> types; notice that the type of the property must be declared. The type is used to determine the property behavior, and how the property is defined in C++.</p>
+<p>A number of property types are supported by default. These are listed in the table below, with their default values and the corresponding C++ type:</p>
+<table class="generic">
+<thead><tr class="qt-style topAlign"><th >QML Type Name</th><th >Default value</th><th >C++ Type Name</th></tr></thead>
+<tr class="odd topAlign"><td ><p><a href="qml-int.html">int</a></p></td><td ><p>0</p></td><td ><p>int</p></td></tr>
+<tr class="even topAlign"><td ><p><a href="qml-bool.html">bool</a></p></td><td ><p><tt>false</tt></p></td><td ><p>bool</p></td></tr>
+<tr class="odd topAlign"><td ><p><a href="qml-double.html">double</a></p></td><td ><p>0.0</p></td><td ><p>double</p></td></tr>
+<tr class="even topAlign"><td ><p><a href="qml-real.html">real</a></p></td><td ><p>0.0</p></td><td ><p>double</p></td></tr>
+<tr class="odd topAlign"><td ><p><a href="qml-string.html">string</a></p></td><td ><p>&quot;&quot; (empty string)</p></td><td ><p><a href="qstring.html">QString</a></p></td></tr>
+<tr class="even topAlign"><td ><p><a href="qml-url.html">url</a></p></td><td ><p>&quot;&quot; (empty url)</p></td><td ><p><a href="qurl.html">QUrl</a></p></td></tr>
+<tr class="odd topAlign"><td ><p><a href="qml-color.html">color</a></p></td><td ><p>#000000 (black)</p></td><td ><p><a href="qcolor.html">QColor</a></p></td></tr>
+<tr class="even topAlign"><td ><p><a href="qml-date.html">date</a></p></td><td ><p><tt>undefined</tt></p></td><td ><p><a href="qdatetime.html">QDateTime</a></p></td></tr>
+<tr class="odd topAlign"><td ><p><a href="qml-variant.html">variant</a></p></td><td ><p><tt>undefined</tt></p></td><td ><p><a href="qvariant.html">QVariant</a></p></td></tr>
+</table>
+<p>QML object types can also be used as property types. This includes <a href="qtbinding.html#defining-new-qml-elements">custom QML types</a> implemented in C++. Such properties are defined like this:</p>
+<pre class="highlightedCode brush: cpp"> property Item itemProperty
+ property QtObject objectProperty
+ property MyCustomType customProperty</pre>
+<p>Such object-type properties default to an <tt>undefined</tt> value.</p>
+<p>It is also possible to store a copy of a JavaScript object using the <tt>variant</tt> property type. This creates some restrictions on how the property should be used; see the <a href="qml-variant.html">variant type documentation</a> for details.</p>
+<p><a href="qml-list.html">List properties</a> are created with the <tt>list&lt;Type&gt;</tt> syntax, and default to an empty list:</p>
+<pre class="highlightedCode brush: cpp"> property list&lt;Item&gt; listOfItems</pre>
+<p>Note that list properties cannot be modified like ordinary JavaScript arrays. See the <a href="qml-list.html">list type documentation</a> for details.</p>
+<a name="property-change-signals"></a>
+<h3>Property change signals</h3>
+<p>Adding a <tt>property</tt> to an item automatically adds a <i>value changed</i> signal handler to the item. To connect to this signal, use a <a href="qdeclarativeintroduction.html#signal-handlers">signal handler</a> named with the <tt>on&lt;Property&gt;Changed</tt> syntax, using upper case for the first letter of the property name.</p>
+<p>For example, the following <tt>onMyNumberChanged</tt> signal handler is automatically called whenever the <tt>myNumber</tt> property changes:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     property int myNumber
+
+     onMyNumberChanged: { console.log(&quot;myNumber has changed:&quot;, myNumber); }
+
+     Component.onCompleted: myNumber = 100
+ }</pre>
+<a name="default-properties"></a>
+<h3>Default properties</h3>
+<p>The optional <tt>default</tt> attribute for a property marks it as the <i>default property</i> for a type. This allows other items to specify the default property's value as child elements. For example, the <a href="qml-item.html">Item</a> element's default property is its <a href="qml-item.html#children-prop">children</a> property. This allows the children of an <a href="qml-item.html">Item</a> to be set like this:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     Rectangle {}
+     Rectangle {}
+ }</pre>
+<p>If the <a href="qml-item.html#children-prop">children</a> property was not the default property for <a href="qml-item.html">Item</a>, its value would have to be set like this instead:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     children: [
+         Rectangle {}
+         Rectangle {}
+     ]
+ }</pre>
+<p>See the <a href="declarative-ui-components-tabwidget.html">TabWidget</a> example for a demonstration of using default properties.</p>
+<p>Specifying a default property overrides any existing default property (for example, any default property inherited from a parent item). Using the <tt>default</tt> attribute twice in the same type block is an error.</p>
+<a name="property-aliases"></a>
+<h3>Property aliases</h3>
+<p>Property aliases are a more advanced form of property declaration. Unlike a property definition, which allocates a new, unique storage space for the property, a property alias connects the newly declared property (called the aliasing property) as a direct reference to an existing property (the aliased property). Read operations on the aliasing property act as read operations on the aliased property, and write operations on the aliasing property as write operations on the aliased property.</p>
+<p>A property alias declaration looks a lot like an ordinary property definition:</p>
+<pre class="highlightedCode brush: cpp">     [default] property alias &lt;name&gt;: &lt;alias reference&gt;</pre>
+<p>As the aliasing property has the same type as the aliased property, an explicit type is omitted, and the special &quot;alias&quot; keyword is used. Instead of a default value, a property alias includes a compulsory alias reference. The alias reference is used to locate the aliased property. While similar to a property binding, the alias reference syntax is highly restricted.</p>
+<p>An alias reference takes one of the following forms:</p>
+<pre class="highlightedCode brush: cpp">     &lt;id&gt;.&lt;property&gt;
+     &lt;id&gt;</pre>
+<p>where &lt;id&gt; must refer to an object id within the same component as the type declaring the alias, and, optionally, &lt;property&gt; refers to a property on that object.</p>
+<p>For example, below is a <tt>Button.qml</tt> component with a <tt>buttonText</tt> aliased property which is connected to the child Text object's <tt>text</tt> property:</p>
+<pre class="highlightedCode brush: cpp"> // Button.qml
+ import QtQuick 1.0
+
+ Item {
+     property alias buttonText: textItem.text
+
+     width: 200; height: 50
+
+     Text { id: textItem }
+ }</pre>
+<p>The following code would create a <tt>Button</tt> with a defined text string for the child <a href="qml-text.html">Text</a> object:</p>
+<pre class="highlightedCode brush: cpp"> Button { buttonText: &quot;This is a button&quot; }</pre>
+<p>Here, modifying <tt>buttonText</tt> directly modifies the <tt>textItem.text</tt> value; it does not change some other value that then updates <tt>textItem.text</tt>.</p>
+<p>In this case, the use of aliased properties is essential. If <tt>buttonText</tt> was not an alias, changing its value would not actually change the displayed text at all, as <a href="propertybinding.html">property bindings</a> are not bi-directional: the <tt>buttonText</tt> value would change when <tt>textItem.text</tt> changes, but not the other way around.</p>
+<p>Aliased properties are also useful for allowing external objects to directly modify and access child objects in a component. For example, here is a modified version of the <tt>ImageViewer</tt> component shown <a href="#adding-properties">earlier</a> on this page. The <tt>currentImage</tt> property has been changed to an alias to the child <a href="qml-image.html">Image</a> object:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p><pre class="highlightedCode brush: cpp"> // ImageViewer.qml
+ import QtQuick 1.0
+
+ Item {
+     id: item
+     width: 200; height: 200
+
+     property alias currentImage: image
+
+     Image { id: image }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> // application.qml
+ import QtQuick 1.0
+
+ ImageViewer {
+     id: viewer
+
+     currentImage.source: &quot;http://qt.nokia.com/logo.png&quot;
+     currentImage.width: width
+     currentImage.height: height
+     currentImage.fillMode: Image.Tile
+
+     Text { text: currentImage.source }
+ }</pre>
+</p></td></tr>
+</table>
+<p>Instead of being limited to setting the <a href="qml-image.html">Image</a> source, <tt>application.qml</tt> can now directly access and modify the child <a href="qml-image.html">Image</a> object and its properties.</p>
+<p>Obviously, exposing child objects in this manner should be done with care, as it allows external objects to modify them freely. However, this use of aliased properties can be quite useful in particular situations, such as for the <a href="declarative-ui-components-tabwidget.html">TabWidget</a> example, where new tab items are actually parented to a child object that displays the current tab.</p>
+<a name="considerations-for-property-aliases"></a>
+<h4>Considerations for property aliases</h4>
+<p>Aliases are only activated once the component specifying them is completed. The most obvious consequence of this is that the component itself cannot generally use the aliased property directly during creation. For example, this will not work:</p>
+<pre class="highlightedCode brush: cpp">     <span class="comment">// Does NOT work</span>
+     property alias buttonText: textItem.text
+     buttonText: &quot;Some text&quot; <span class="comment">// buttonText is not yet defined when this value is set</span></pre>
+<p>A second, much less significant, consequence of the delayed activation of aliases is that an alias reference cannot refer to another aliasing property declared within the same component. This will not work:</p>
+<pre class="highlightedCode brush: cpp">     <span class="comment">// Does NOT work</span>
+     id: root
+     property alias buttonText: textItem.text
+     property alias buttonText2: root.buttonText</pre>
+<p>At the time the component is created, the <tt>buttonText</tt> value has not yet been assigned, so <tt>root.buttonText</tt> would refer to an undefined value. (From outside the component, however, aliasing properties appear as regular Qt properties and consequently can be used in alias references.)</p>
+<p>It is possible for an aliased property to have the same name as an existing property. For example, the following component has a <tt>color</tt> alias property, named the same as the built-in <a href="qml-rectangle.html#color-prop">Rectangle::color</a> property:</p>
+<pre class="highlightedCode brush: cpp"> Rectangle {
+     property alias color: childRect.color
+     color: &quot;red&quot;
+
+     Rectangle { id: childRect }
+ }</pre>
+<p>Any objects that use this component and refer to its <tt>color</tt> property will be referring to the alias rather than the ordinary <a href="qml-rectangle.html#color-prop">Rectangle::color</a> property. Internally, however, the rectangle can correctly set this property to &quot;red&quot; and refer to the actual defined property rather than the alias.</p>
+<a name="adding-methods"></a>
+<h2>Adding Methods</h2>
+<p>A QML component can define methods of JavaScript code. These methods can be invoked either internally or by other objects.</p>
+<p>The syntax for defining a method is:</p>
+<pre class="highlightedCode brush: cpp"> function &lt;name&gt;([&lt;parameter name&gt;[, ...]]) { &lt;body&gt; }</pre>
+<p>This declaration may appear anywhere within a type body, but it is customary to include it at the top. Attempting to declare two methods or signals with the same name in the same type block is an error. However, a new method may reuse the name of an existing method on the type. (This should be done with caution, as the existing method may be hidden and become inaccessible.)</p>
+<p>Unlike <a href="#adding-signals">signals</a>, method parameter types do not have to be declared as they default to the <tt>variant</tt> type. The body of the method is written in JavaScript and may access the parameters by name.</p>
+<p>Here is an example of a component with a <tt>say()</tt> method that accepts a single <tt>text</tt> argument:</p>
+<pre class="highlightedCode brush: cpp"> Rectangle {
+     id: rect
+     width: 100; height: 100
+
+     function say(text) {
+         console.log(&quot;You said: &quot; + text);
+     }
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: rect.say(&quot;Mouse clicked&quot;)
+     }
+ }</pre>
+<p>A method can be connected to a signal so that it is automatically invoked whenever the signal is emitted. See <a href="#connecting-signals-to-methods-and-other-signals">Connecting signals to methods and other signals</a> below.</p>
+<p>Also see <a href="qdeclarativejavascript.html">Integrating JavaScript</a> for more information on using JavaScript with QML.</p>
+<a name="adding-signals"></a>
+<h2>Adding Signals</h2>
+<p>Signals provide a way to notify other objects when an event has occurred. For example, the <a href="qml-mousearea.html">MouseArea</a> <tt>clicked</tt> signal notifies other objects that the mouse has been clicked within the area.</p>
+<p>The syntax for defining a new signal is:</p>
+<pre class="highlightedCode brush: cpp"> signal &lt;name&gt;[([&lt;type&gt; &lt;parameter name&gt;[, ...]])]</pre>
+<p>This declaration may appear anywhere within a type body, but it is customary to include it at the top. Attempting to declare two signals or methods with the same name in the same type block is an error. However, a new signal may reuse the name of an existing signal on the type. (This should be done with caution, as the existing signal may be hidden and become inaccessible.)</p>
+<p>Here are three examples of signal declarations:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     signal clicked
+     signal hovered()
+     signal performAction(string action, variant actionArgument)
+ }</pre>
+<p>If the signal has no parameters, the &quot;()&quot; brackets are optional. If parameters are used, the parameter types must be declared, as for the <tt>string</tt> and <tt>variant</tt> arguments for the <tt>performAction</tt> signal above; the allowed parameter types are the same as those listed in the <a href="#adding-properties">Adding Properties</a> section on this page.</p>
+<p>Adding a signal to an item automatically adds a <a href="qdeclarativeintroduction.html#signal-handlers">signal handler</a> as well. The signal hander is named <tt>on&lt;SignalName&gt;</tt>, with the first letter of the signal being upper cased. The above example item would now have the following signal handlers:</p>
+<ul>
+<li>onClicked</li>
+<li>onHovered</li>
+<li>onPerformAction</li>
+</ul>
+<p>To emit a signal, simply invoke it in the same way as a method. Below left, when the <a href="qml-mousearea.html">MouseArea</a> is clicked, it emits the parent <tt>buttonClicked</tt> signal by invoking <tt>rect.buttonClicked()</tt>. The signal is received by <tt>application.qml</tt> through an <tt>onButtonClicked</tt> signal handler:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p><pre class="highlightedCode brush: cpp"> // Button.qml
+ import QtQuick 1.0
+
+ Rectangle {
+     id: rect
+     width: 100; height: 100
+
+     signal buttonClicked
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: rect.buttonClicked()
+     }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> // application.qml
+ import QtQuick 1.0
+
+ Button {
+     width: 100; height: 100
+     onButtonClicked: console.log(&quot;Mouse was clicked&quot;)
+ }</pre>
+</p></td></tr>
+</table>
+<p>If the signal has parameters, they are accessible by parameter name in the signal handler. In the example below, <tt>buttonClicked</tt> is emitted with <tt>xPos</tt> and <tt>yPos</tt> parameters instead:</p>
+<table class="generic">
+<tr class="odd topAlign"><td ><p><pre class="highlightedCode brush: cpp"> // Button.qml
+ Rectangle {
+     id: rect
+     width: 100; height: 100
+
+     signal buttonClicked(int xPos, int yPos)
+
+     MouseArea {
+         anchors.fill: parent
+         onClicked: rect.buttonClicked(mouse.x, mouse.y)
+     }
+ }</pre>
+</p></td><td ><p><pre class="highlightedCode brush: cpp"> // application.qml
+ Button {
+     width: 100; height: 100
+     onButtonClicked: {
+         console.log(&quot;Mouse clicked at &quot; + xPos + &quot;,&quot; + yPos)
+     }
+ }</pre>
+</p></td></tr>
+</table>
+<a name="connecting-signals-to-methods-and-other-signals"></a>
+<h3>Connecting signals to methods and other signals</h3>
+<p>Signal objects have a <tt>connect()</tt> method that can be used to a connect a signal to a method or another signal. When a signal is connected to a method, the method is automatically invoked whenever the signal is emitted. (In Qt terminology, the method is a <i>slot</i> that is connected to the <i>signal</i>; all methods defined in QML are created as Qt slots.) This enables a signal to be received by a method instead of a <a href="qdeclarativeintroduction.html#signal-handlers">signal handler</a>.</p>
+<p>For example, the <tt>application.qml</tt> above could be rewritten as:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     id: item
+     width: 200; height: 200
+
+     function myMethod() {
+         console.log(&quot;Button was clicked!&quot;)
+     }
+
+     Button {
+         id: button
+         anchors.fill: parent
+         Component.onCompleted: buttonClicked.connect(item.myMethod)
+     }
+ }</pre>
+<p>The <tt>myMethod()</tt> method will be called whenever the <tt>buttonClicked</tt> signal is received.</p>
+<p>In many cases it is sufficient to receive signals through signal handlers rather than using the <tt>connect()</tt> function; the above example does not provide any improvements over using a simple <tt>onButtonClicked</tt> handler. However, if you are <a href="qdeclarativedynamicobjects.html">creating objects dynamically</a>, or <a href="qdeclarativejavascript.html">integrating JavaScript code</a>, then you will find the <tt>connect()</tt> method useful. For example, the component below creates three <tt>Button</tt> objects dynamically, and connects the <tt>buttonClicked</tt> signal of each object to the <tt>myMethod()</tt> function:</p>
+<pre class="highlightedCode brush: cpp"> Item {
+     id: item
+     width: 300; height: 100
+
+     function myMethod() {
+         console.log(&quot;Button was clicked!&quot;)
+     }
+
+     Row { id: row }
+
+     Component.onCompleted: {
+         var component = Qt.createComponent(&quot;Button.qml&quot;)
+         for (var i=0; i&lt;3; i++) {
+             var button = component.createObject(row)
+             button.border.width = 1
+             button.buttonClicked.connect(myMethod)
+         }
+     }
+ }</pre>
+<p>In the same way, you could connect a signal to methods defined in a dynamically created object, or <a href="qdeclarativejavascript.html#receiving-qml-signals-in-javascript">connect a signal to a JavaScript method</a>.</p>
+<p>There is also a corresponding <tt>disconnect()</tt> method for removing connected signals. The following code removes the connection created in <tt>application.qml</tt> above:</p>
+<pre class="highlightedCode brush: cpp"> // application.qml
+ Item {
+     ...
+
+     function removeSignal() {
+         button.clicked.disconnect(item.myMethod)
+     }
+ }</pre>
+<a name="forwarding-signals"></a>
+<h4>Forwarding signals</h4>
+<p>The <tt>connect()</tt> method can also connect a signal to other signals. This has the effect of &quot;forwarding&quot; a signal: it is automatically emitted whenever the relevant signal is emitted. For example, the <a href="qml-mousearea.html">MouseArea</a> <tt>onClicked</tt> handler in <tt>Button.qml</tt> above could have been replaced with a call to <tt>connect()</tt>:</p>
+<pre class="highlightedCode brush: cpp"> MouseArea {
+     anchors.fill: parent
+     Component.onCompleted: clicked.connect(item.buttonClicked)
+ }</pre>
+<p>Whenever the <a href="qml-mousearea.html">MouseArea</a> <tt>clicked</tt> signal is emitted, the <tt>rect.buttonClicked</tt> signal will automatically be emitted as well.</p>
+</div>
+<!-- @@@qml-extending-types.html -->
+        <div class="feedback t_button">
+          [+] Documentation Feedback</div>
+      </div>
+    </div>
+    </div> 
+    <div class="ft">
+      <span></span>
+    </div>
+  </div> 
+  <div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2008-2010 Nokia Corporation and/or its
+      subsidiaries. Nokia, Qt and their respective logos are trademarks of Nokia Corporation 
+      in Finland and/or other countries worldwide.</p>
+    <p>
+      All other trademarks are property of their respective owners. <a title="Privacy Policy"
+        href="http://qt.nokia.com/about/privacy-policy">Privacy Policy</a></p>
+    <br />
+    <p>
+      Licensees holding valid Qt Commercial licenses may use this document in accordance with the      Qt Commercial License Agreement provided with the Software or, alternatively, in accordance      with the terms contained in a written agreement between you and Nokia.</p>
+    <p>
+      Alternatively, this document may be used under the terms of the <a href="http://www.gnu.org/licenses/fdl.html">GNU
+      Free Documentation License version 1.3</a>
+      as published by the Free Software Foundation.</p>
+  </div>
+  <div id="feedbackBox">
+      <div id="feedcloseX" class="feedclose t_button">X</div>
+    <form id="feedform" action="http://doc.qt.nokia.com/docFeedbck/feedback.php" method="get">
+      <p id="noteHead">Thank you for giving your feedback.</p> <p class="note">Make sure it is related to this specific page. For more general bugs and 
+      requests, please use the <a href="http://bugreports.qt.nokia.com/secure/Dashboard.jspa">Qt Bug Tracker</a>.</p>
+      <p><textarea id="feedbox" name="feedText" rows="5" cols="40"></textarea></p>
+      <p><input id="feedsubmit" class="feedclose" type="submit" name="feedback" /></p>
+    </form>
+  </div>
+  <div id="blurpage">
+  </div>
+</body>
+</html>

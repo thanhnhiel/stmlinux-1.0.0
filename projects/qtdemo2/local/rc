@@ -1,0 +1,13 @@
+#!/bin/sh
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devpts none /dev/pts
+export TSLIB_FBDEVICE=/dev/fb0
+export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_CONFFILE=/etc/ts.conf
+mkdir /mnt
+# sleep 3 && mount -o nolock,rsize=1024 172.17.0.1:/home/vlad/test/HEAD/projects /mnt
+ifconfig lo 127.0.0.1
+# ifconfig eth0 172.17.0.199
+route add default gw 192.168.1.1
+echo "nameserver 208.67.222.222" > /etc/resolv.conf

@@ -1,0 +1,1 @@
+cmd_/mnt/data1/workspace/stmlinux-1.0.0/projects/qtdemo2/app/sample.ko := arm-uclinuxeabi-ld -EL -r  -T /mnt/data1/workspace/stmlinux-1.0.0/linux/scripts/module-common.lds  -o /mnt/data1/workspace/stmlinux-1.0.0/projects/qtdemo2/app/sample.ko /mnt/data1/workspace/stmlinux-1.0.0/projects/qtdemo2/app/sample.o /mnt/data1/workspace/stmlinux-1.0.0/projects/qtdemo2/app/sample.mod.o

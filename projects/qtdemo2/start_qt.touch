@@ -1,0 +1,4 @@
+#!/bin/sh
+export QWS_MOUSE_PROTO=linuxinput:/dev/input/event0
+cd /qtdemo
+./qt

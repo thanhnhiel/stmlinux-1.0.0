@@ -1,0 +1,6 @@
+QMAKE_PRL_BUILD_DIR = /mnt/data1/workspace/reader-linux-1.13.1-touch/A2F/qt-4.7.3/src/network/
+QMAKE_PRO_INPUT = network.pro
+QMAKE_PRL_TARGET = libQtNetwork.a
+QMAKE_PRL_CONFIG = lex yacc warn_on uic resources qt warn_on release incremental link_prl def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release static embedded largefile stl precompile_header exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc explicitlib moc thread staticlib static
+QMAKE_PRL_VERSION = 4.7.3
+QMAKE_PRL_LIBS = -L/mnt/data1/workspace/reader-linux-1.13.1-touch/A2F/qt-4.7.3/lib  -lQtCore -L/mnt/data1/workspace/reader-linux-1.13.1-touch/A2F/qt-4.7.3/lib -lm -lrt -lpthread  

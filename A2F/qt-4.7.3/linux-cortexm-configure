@@ -1,0 +1,36 @@
+#!/bin/sh
+./configure -embedded arm-uclinuxeabi -confirm-license -prefix-install -opensource -static \
+    -release -no-exceptions -no-accessibility -no-qt3support -no-gif -qt-zlib \
+    -no-libtiff -qt-libpng -no-libmng -no-libjpeg -no-openssl -no-nis -no-cups \
+    -no-iconv -no-dbus -no-avx -no-neon -no-xmlpatterns -no-multimedia \
+    -no-phonon -no-phonon-backend -no-audio-backend -no-javascript-jit \
+    -no-webkit -no-freetype -no-opengl -qt-gfx-linuxfb \
+    -no-kbd-linuxinput -no-kbd-tty -no-glib -no-script -no-scripttools -no-declarative \
+    -nomake examples -nomake demos -nomake docs \
+    -feature-TEXTHTMLPARSER -no-feature-TEXTODFWRITER -no-feature-CONCURRENT \
+    -no-feature-DRAGANDDROP -no-feature-SESSIONMANAGER -no-feature-CURSOR \
+    -no-feature-CLIPBOARD -no-feature-WHEELEVENT -no-feature-SOUND \
+    -no-feature-EFFECTS -no-feature-SHAREDMEMORY -no-feature-SYSTEMSEMAPHORE \
+    -no-feature-IM -no-feature-QUUID_STRING -no-feature-PROCESS \
+    -no-feature-LIBRARY -no-feature-FILESYSTEMMODEL \
+    -no-feature-FILESYSTEMWATCHER -no-feature-TEXTBROWSER \
+    -no-feature-WORKSPACE -no-feature-MDIAREA -no-feature-SYNTAXHIGHLIGHTER \
+    -no-feature-SIZEGRIP -no-feature-PRINTPREVIEWWIDGET -no-feature-PRINTDIALOG \
+    -no-feature-PRINTPREVIEWDIALOG -no-feature-IMAGEFORMATPLUGIN \
+    -no-feature-MOVIE -no-feature-IMAGEFORMAT_PPM -no-feature-IMAGEFORMAT_XBM \
+    -no-feature-IMAGEFORMAT_XPM -feature-IMAGEFORMAT_PNG \
+    -no-feature-IMAGEFORMAT_JPEG -no-feature-IMAGE_HEURISTIC_MASK \
+    -no-feature-IMAGE_TEXT -no-feature-PICTURE -no-feature-PRINTER \
+    -no-feature-CUPS -no-feature-TEXTCODECPLUGIN -no-feature-URLINFO \
+    -no-feature-HOSTINFO -no-feature-FTP -no-feature-HTTP -no-feature-UDPSOCKET \
+    -no-feature-NETWORKPROXY -no-feature-SOCKS5 -no-feature-COP \
+    -no-feature-NETWORKINTERFACE -no-feature-NETWORKDISKCACHE \
+    -no-feature-BEARERMANAGEMENT -no-feature-COMPLETER -no-feature-FSCOMPLETER \
+    -no-feature-DESKTOPSERVICES -no-feature-SYSTEMTRAYICON \
+    -no-feature-UNDOCOMMAND -no-feature-UNDOSTACK -no-feature-UNDOGROUP \
+    -no-feature-UNDOVIEW -no-feature-ACCESSIBILITY -no-feature-ANIMATION \
+    -no-feature-GESTURES -no-feature-QWS_SOUNDSERVER \
+    -no-feature-QWS_MULTIPROCESS -no-feature-QWS_MANAGER -no-feature-QWS_MOUSE \
+    -no-feature-QWS_PROPERTIES -no-feature-QWS_VNC -no-feature-DBUS \
+    -no-feature-PHONON_PLATFORMPLUGIN
+
