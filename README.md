@@ -1,24 +1,24 @@
 # stmlinux-1.0.0
 
 ### How to build
-### 1. Create workspace
+#### Create workspace
 ```bash
 mkdir qtdemo
 cd qtdemo
 ```
-2. Download compiler <br>
+#### Download compiler <br>
 ```bash
 wget http://www.codesourcery.com/sgpp/lite/arm/portal/package6503/public/arm-uclinuxeabi/arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2
 ```
-3. Extract compiler to workspace<br>
+#### Extract compiler to workspace<br>
 ```bash
 tar xvf arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2
 ```
-4. Download source code<br>
+#### Download source code<br>
 ```bash
 git clone https://github.com/thanhnhiel/stmlinux-1.0.0.git
 ```
-5. Setting environment<br>
+#### Setting environment<br>
 ```bash
 # Path to cross-tools
 export ROOT=`pwd`
@@ -29,25 +29,25 @@ export CROSS_COMPILE_APPS=arm-uclinuxeabi-
 # Define the MCU architecture
 export MCU=STM32F4X9
 ```
-6. Build u-boot
+#### Build u-boot
 cd stmlinux-1.0.0
 cd u-boot
 rm -rf obj
 make diskclean
 make stm32f429-discovery O=obj
 
-7. Config kernel & busybox<br>
+#### Config kernel & busybox<br>
 ```bash
 cd stmlinux-1.0.0/projects/qtdemo2
 make kmenuconfig
 make bmenuconfig
 ```
-8. build kernel<br>
+#### build kernel<br>
 ```bash
 make
 ```
 
-9. Programing by st-link tools on the window.
+#### Programing by st-link tools on the window.
 Output files:<br>
 
 <table>
@@ -63,7 +63,7 @@ Output files:<br>
 </table>
 
 
-10.
+#### Output Log
 ```bash
 U-Boot 2010.03 (Dec 17 2015 - 19:59:08)
 
