@@ -30,12 +30,13 @@ export CROSS_COMPILE_APPS=arm-uclinuxeabi-
 export MCU=STM32F4X9
 ```
 #### Build u-boot
+```bash
 cd stmlinux-1.0.0
 cd u-boot
 rm -rf obj
 make diskclean
 make stm32f429-discovery O=obj
-
+```
 #### Config kernel & busybox<br>
 ```bash
 cd stmlinux-1.0.0/projects/qtdemo2
