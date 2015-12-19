@@ -34,7 +34,7 @@ export MCU=STM32F4X9
 cd stmlinux-1.0.0
 cd u-boot
 rm -rf obj
-make diskclean
+make clean
 make stm32f429-discovery O=obj
 ```
 #### Config kernel & busybox<br>
